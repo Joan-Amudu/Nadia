@@ -1,5 +1,5 @@
 body {
-   
+    background-color: #d3e3fd;
     color: #000; 
 }
 header {
@@ -9,4 +9,7 @@ header {
 .navbar-toggler {
     border-color: #fff;
     
+}
+.flashes h4 {
+    line-height: 2;
 }
