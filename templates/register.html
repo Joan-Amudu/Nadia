@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h5 class="text-center">Register</h5>
+
+<div class="row">    
+    <form class="col-12 col-md-6 offset-md-3" method="POST" action="{{ url_for('register') }}"> 
+        <!--Username-->    
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input id="username" name= "username" type="text" class="form-control">        
+      </div>
+        <!--password-->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id= "password" name="password" type="password" class="form-control">
+      </div>
+      <!--register-->
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+
+{% endblock %}
