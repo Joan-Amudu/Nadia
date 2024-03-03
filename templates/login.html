@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<h5 class="text-center">Register</h5>
+<h5 class="text-center">Log In</h5>
 
 <div class="row">    
-    <form class="col-12 col-md-6 offset-md-3" method="POST" action="{{ url_for('register') }}"> 
+    <form class="col-12 col-md-6 offset-md-3" method="POST" action="{{ url_for('login') }}"> 
         <!--Username-->    
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
@@ -16,18 +16,20 @@
         <input id= "password" name="password" type="password" class="form-control"
             minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
       </div>
-      <!--register-->
-      <button type="submit" class="btn btn-primary">Register</button>
+      <!--log in-->
+      <button type="submit" class="btn btn-primary">Log In</button>
     </form>
   </div>
 
   <div class="row">
     <div class="col-12">
       <p class="text-center">
-        Already Registered?
-        <a href="{{ url_for('login') }}">Log In</a>
+        New Here?
+        <a href="{{ url_for('register') }}">Register Account</a>
       </p>
     </div>
   </div>
+
+
 
 {% endblock %}
