@@ -19,12 +19,22 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
+def home():    
+    return render_template("home.html")
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 @app.route("/get_contacts")
 def get_contacts():
     contacts = mongo.db.contacts.find()
     return render_template("contact.html", contacts=contacts)
 
 
+# User Authentication
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block banner %}
+<!--Hero Image-->
+   <div class="hero_image">
+      <div class="row text-center">
+         <h2 class="black-text center-align"><strong><em>Nadya Yoga</em></strong></h2>
+         <h5 class="black-text center-align">
+          
+         </h5>
+      </div>
+      <div class="row text-center">
+         <a href="{{ url_for('register') }}" class="btn btn-flat white-text">Join Us</a>    
+      </div>
+   </div>
+{% endblock %}
+{% block content %}
+<div class="something">
+   <div class="row text-center">
+      <h2 class="black-text center-align">Offerings</h2>
+      <h5 class="black-text center-align">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis magni dolorum optio provident quam facilis repellat? Nihil adipisci corrupti, quia cum ullam vero odit labore voluptatum eaque debitis beatae eius.</p>
+       
+      </h5>
+   </div>  
+</div>
+
+<div class="row">
+   <div class="col">
+     <div class="card">
+       
+       <div class="card-body">
+         <h5 class="card-title">Vinyasa</h5>
+         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       </div>
+     </div>
+   </div>
+   <div class="col">
+     <div class="card">
+       <img src="{{ url_for('static', filename='images/background.jpeg') }}" class="card-img-top" alt="...">       
+     </div>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col">
+     <div class="card">
+       <img src="{{ url_for('static', filename='images/background.jpeg') }}" class="card-img-top" alt="...">
+       
+     </div>
+   </div>
+   <div class="col">
+     <div class="card">
+      
+       <div class="card-body">
+         <h5 class="card-title">Hatha Yoga</h5>
+         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div class="row">
+   <div class="col">
+     <div class="card">
+      
+       <div class="card-body">
+         <h5 class="card-title">Vinyasa</h5>
+         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       </div>
+     </div>
+   </div>
+   <div class="col">
+     <div class="card">
+       <img src="{{ url_for('static', filename='images/background.jpeg') }}" class="card-img-top" alt="...">
+       
+     </div>
+   </div>
+</div>
+   
+{% endblock %}
