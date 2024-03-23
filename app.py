@@ -23,6 +23,12 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/get_classes")
+def get_classes():
+    classes = mongo.db.classes.find()
+    return render_template("classes.html", classes=classes)
+
+
 @app.route("/about")
 def about():
     return render_template("about.html")

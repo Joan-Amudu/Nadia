@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<!--Hero Image-->
+   <div>
+      <div class="row text-center">
+         <h2 class="black-text center-align"><strong><em>About Nadya</em></strong></h2>
+         <h5 class="black-text center-align">
+         <p>my story goes here</p>
+          
+         </h5>
+      </div>     
+   </div>
+
+   <div class="something">
+      <div class="row text-center">
+         <h2 class="black-text center-align">Classes</h2>
+         <h5 class="black-text center-align">
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis magni dolorum optio provident quam facilis repellat? Nihil adipisci corrupti, quia cum ullam vero odit labore voluptatum eaque debitis beatae eius.</p>
+          
+         </h5>
+      </div>  
+   </div>
+   
+   <div class="card" style="width: 18rem;">
+      {% for class in classes %}
+   
+         {% if class.image_url == "" or class.image_url is none %}
+         <img src="{{ url_for('static', filename='images/background.jpeg') }}" class="card-img-top" alt="flower">
+         {% else %}
+         <img src="{{ class.image_url }}" class="card-img-top" alt="class.title"> 
+         {% endif %} 
+     
+      <div class="card-body">
+        <h5 class="card-title"><strong>{{ class.title }}</strong></h5>
+        <p class="card-text">{{ class.description }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}
