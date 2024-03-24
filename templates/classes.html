@@ -25,7 +25,7 @@
       {% for class in classes %}
    
          {% if class.image_url == "" or class.image_url is none %}
-         <img src="{{ url_for('static', filename='images/background.jpeg') }}" class="card-img-top" alt="flower">
+         <img src="{{ url_for('static', filename='images/yoga.png') }}" class="card-img-top" alt="flower">
          {% else %}
          <img src="{{ class.image_url }}" class="card-img-top" alt="class.title"> 
          {% endif %} 

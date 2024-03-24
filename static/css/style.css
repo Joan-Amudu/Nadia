@@ -1,27 +1,72 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    background-color: rgb(251, 246, 238);
+}
+
+h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 textarea {
     height: 100px;
 }
 .navbar-toggler {
-    border-color: #fff;
-    
+    border-color: #fff;    
 }
 
 img {
     height: 400px;
 }
+
+
+.hero_image {
+    padding-top: 40px;
+    margin-top: 40px;   
+}
+/*--
 .hero_image {
     height: 100vh;
-      background: url('../images/background1.jpeg') no-repeat center center;
+      background: url('../images/yoga.svg') no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       overflow: hidden;
       position: relative;
-      opacity: 0.7;
+      opacity: 0.9;
   }
+--*/
+.welcome-heading {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;    
+    justify-content: center;    
+}
+
+.welcome-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    padding-top: 60px;   
+}
+
+.join-me-button {
+    border-color: rgb(238, 188, 161);
+    color: black;
+    min-width: 200px;
+}
 
   .something {
     background-color: #7F8E80;
   }
+
+/*--
+rgb(238, 188, 161)
+ background-color: rgb(156, 93, 58);
+--*/

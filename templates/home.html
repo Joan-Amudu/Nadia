@@ -2,16 +2,28 @@
 {% block banner %}
 <!--Hero Image-->
    <div class="hero_image">
-      <div class="row text-center">
-         <h2 class="black-text center-align"><strong><em>Nadya Yoga</em></strong></h2>
-         <h5 class="black-text center-align">
-          
-         </h5>
+      <div class="row welcome-heading text-center">
+         <h1 class="white-text center-align">Welcome!</h1>
       </div>
-      <div class="row text-center">
-         <a href="{{ url_for('register') }}" class="btn btn-flat white-text">Join Us</a>    
-      </div>
+
+      <div class="row welcome-text text-center">
+         <div class="col-6 my-5">
+            <p class="black-text center-align">
+               Whether you're a seasoned yogi or stepping onto the mat for the first time, <br>
+               I invite you to join me on this adventure.<br></p>
+            <p>
+               Let's breathe, move, and discover the incredible potential that lies within each of us.<br>
+               Together, let's create a community that supports and uplifts one another.<br>
+            </p>
+            <div class="my-5 text-center">
+               <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">Join Me!</a>    
+            </div>            
+         </div>
+         <div class="col-6">
+            <img src="{{ url_for('static', filename='images/yoga.svg') }}" alt="">
+         </div>
+         
+      </div>   
+      
    </div>
 {% endblock %}
-
- 
