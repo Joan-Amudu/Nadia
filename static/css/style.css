@@ -1,17 +1,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 body {
     background-color: rgb(251, 246, 238);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    min-height: 100vh;
 }
 
-h2 {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 500;
+.logo-image img {
+    height: 100px;
+    width: 120px;
+    position: relative;
+}
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
     font-style: normal;
 }
+
 textarea {
     height: 100px;
 }
@@ -23,50 +31,84 @@ img {
     height: 400px;
 }
 
-
-.hero_image {
+.hero_image, 
+.about {
     padding-top: 40px;
-    margin-top: 40px;   
+       
 }
-/*--
-.hero_image {
-    height: 100vh;
-      background: url('../images/yoga.svg') no-repeat center center;
+
+
+.banner {
+    height: 350px;
+      background: url('../images/banner.jpeg') no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       overflow: hidden;
       position: relative;
-      opacity: 0.9;
+      opacity: 0.85;
+     
   }
---*/
-.welcome-heading {
+
+.welcome-heading {       
+    justify-content: center; 
+    position: relative;
+    z-index: -1;
+    max-width: 62ch;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.25em;
+    color: black;
+     
+}
+
+.heading-large {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+          
+    font-size: 3em;
+    line-height: 1.2;
+    	
+ }
+.join-me span {
+    border-bottom: 4px solid rgb(238, 188, 161);
+    justify-content: center;
+}
+ span {
+
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;    
-    justify-content: center;    
-}
+    font-style: normal;
+
+ }
+    
 
 .welcome-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal; 
-    padding-top: 60px;   
+    padding-top: 60px;
 }
 
-.join-me-button {
-    border-color: rgb(238, 188, 161);
+.join-me-button,
+.contact-btn,
+.card {
+    border-color:  rgb(156, 93, 58);  
     color: black;
     min-width: 200px;
 }
 
-  .something {
-    background-color: #7F8E80;
-  }
 
 /*--
 rgb(238, 188, 161)
  background-color: rgb(156, 93, 58);
 --*/
+
+/*--
+.container-large {
+    width: 100%;
+	max-width: 50em;
+    margin-right: auto;
+    margin-left: auto;
+
+}--*/
