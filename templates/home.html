@@ -1,29 +1,67 @@
 {% extends "base.html" %}
+
 {% block banner %}
 <!--Hero Image-->
-   <div class="hero_image">
-      <div class="row welcome-heading text-center">
-         <h1 class="white-text center-align">Welcome!</h1>
-      </div>
 
-      <div class="row welcome-text text-center">
-         <div class="col-6 my-5">
-            <p class="black-text center-align">
-               Whether you're a seasoned yogi or stepping onto the mat for the first time, <br>
-               I invite you to join me on this adventure.<br></p>
-            <p>
-               Let's breathe, move, and discover the incredible potential that lies within each of us.<br>
-               Together, let's create a community that supports and uplifts one another.<br>
-            </p>
-            <div class="my-5 text-center">
-               <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">Join Me!</a>    
-            </div>            
-         </div>
-         <div class="col-6">
-            <img src="{{ url_for('static', filename='images/yoga.svg') }}" alt="">
-         </div>
-         
-      </div>   
-      
+
+   <div class="container-large hero_image">
+      <div class="row welcome-heading text-center">
+         <h1 class="heading-large center-align">
+            <span>Nadya Yoga</span> <br>
+         </h1>
+         <h3 class="my-5">
+            Step onto the mat and into a world of tranquility and self-discovery.
+         </h3>                     
+      </div>
    </div>
+   
+{% endblock %}
+{% block content %}
+<div class="row">
+   <div class="col my-5 text-center join-me">
+      <h3 class="text-center"> <span>Join Me</span></h3>      
+      <p>
+         Embark on a Journey of Mindfulness and Wellness <br>
+         Find Your Balance. Connect with Your Breath. Transform Your Life. <br>
+      </p>
+      <p>
+         Whether you're a seasoned yogi or stepping onto the mat for the first time, <br>
+         I invite you to join me on this adventure. Let's breathe, move, and discover the incredible potential <br>
+         that lies within each of us. Together,<br>
+         let's create a community that supports and uplifts one another.
+      </p>
+      <div class="my-5 text-center">
+         <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">Join Me!</a>    
+      </div> 
+   </div>  
+</div>
+
+   <!--
+   <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
+      <div class="col">
+        <div class="card h-100">          
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>          
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">          
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>          
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">          
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>          
+        </div>
+      </div>
+    </div>
+   -->
 {% endblock %}
