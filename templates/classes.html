@@ -1,40 +1,75 @@
 {% extends "base.html" %}
 
-{% block content %}
-   <div>
+{% block banner %}
+<!--About banner-->
+   <div class="about">
       <div class="row text-center">
-         <h2 class="black-text center-align"><strong><em>About Nadya</em></strong></h2>
-         <h5 class="black-text center-align">
-         <p>my story goes here</p>
-          
-         </h5>
-      </div>     
+            <h2 class="heading-large center-align my-5">
+                <span>Classes</span>
+            </h2>
+                        
+      </div>    
    </div>
+{% endblock %}
 
-   <div class="something">
-      <div class="row text-center">
-         <h2 class="black-text center-align">Classes</h2>
-         <h5 class="black-text center-align">
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis magni dolorum optio provident quam facilis repellat? Nihil adipisci corrupti, quia cum ullam vero odit labore voluptatum eaque debitis beatae eius.</p>
-          
-         </h5>
-      </div>  
-   </div>
-   
-   <div class="card" style="width: 18rem;">
-      {% for class in classes %}
-   
-         {% if class.image_url == "" or class.image_url is none %}
-         <img src="{{ url_for('static', filename='images/yoga.png') }}" class="card-img-top" alt="flower">
-         {% else %}
-         <img src="{{ class.image_url }}" class="card-img-top" alt="class.title"> 
-         {% endif %} 
-     
-      <div class="card-body">
-        <h5 class="card-title"><strong>{{ class.title }}</strong></h5>
-        <p class="card-text">{{ class.description }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-      {% endfor %}
-    </div>
+{% block content %}
+<div class="row text-center about">
+  <div class="col about-journey">
+      <h3 class="my-5">
+         <span>Vinyasa Yoga</span>
+       </h3>
+      <p> 
+        Experience the fluidity of movement and breath with Vinyasa yoga, 
+        a dynamic practice that synchronizes breath with continuous flowing sequences of poses. 
+        Led by Nadya, our Vinyasa yoga classes offer a mindful exploration of movement, balance, 
+        and strength. Each session is designed to cultivate a harmonious connection between body 
+        and mind, as you gracefully transition through poses, building heat, flexibility, and 
+        awareness. Whether you're a seasoned practitioner or new to yoga, join us on the mat to 
+        awaken your vitality and discover the joy of moving with intention.
+      </p>
+  </div> 
+
+  <div class="col-6">
+    <img src="{{ url_for('static', filename='images/yoga.svg') }}" alt="">
+</div>
+
+</div>
+
+<div class="row text-center about">
+  <div class="col-6">
+    <img src="{{ url_for('static', filename='images/yoga.svg') }}" alt="">
+</div>
+
+
+  <div class="col about-journey">
+    <h3 class="my-5">
+       <span>Pre-Natal Yoga</span>
+     </h3>
+    <p> 
+      Nurture your body and prepare for the miracle of birth with prenatal yoga led by Nadya. 
+      Our prenatal yoga classes offer gentle and supportive practices tailored specifically for 
+      expectant mothers. Through a combination of gentle stretches, breathwork, and relaxation 
+      techniques, you'll cultivate strength, flexibility, and mindfulness to support you through
+      pregnancy and childbirth. Nadya provides a nurturing environment where you can safely explore 
+      movement and connect with your growing baby. Join us to embrace the transformative journey of 
+      pregnancy with grace and confidence.
+    </p>
+  </div>   
+</div>
+
+
+<div class="row text-center about">
+    <div class="col about-journey">
+        <h3 class="my-5">
+          <span>Passion for Yoga</span>
+        </h3>
+        <p>
+          While I may be a newcomer to teaching, my passion for yoga runs deep.<br>
+          I am eager to share the joy and tranquility that yoga has brought into my life.<br>
+          Every pose, every breath, is an opportunity for self-discovery, and I am excited to embark on this journey with you.<br>
+        </p>
+    </div>            
+</div>  
+    
+
 {% endblock %}
