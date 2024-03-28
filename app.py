@@ -19,8 +19,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-def home():    
-    return render_template("home.html")
+def home():
+    classes = mongo.db.classes.find()    
+    return render_template("home.html", classes=classes)
 
 
 @app.route("/get_classes")
@@ -30,7 +31,7 @@ def get_classes():
 
 
 @app.route("/about")
-def about():
+def about():    
     return render_template("about.html")
 
 

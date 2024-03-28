@@ -17,9 +17,25 @@
    
 {% endblock %}
 {% block content %}
+<!--About Nadya-->
 <div class="row">
-   <div class="col my-5 text-center join-me">
-      <h3 class="text-center"> <span>Join Me</span></h3>      
+   <div class="col text-center about"> 
+      <h3 class="heading-large center-align my-5">
+         <span>About Nadya</span>
+      </h3>  
+      <p>
+         I discovered the transformative power of yoga during a time <br>
+         of personal exploration.Drawn to its holistic approach, <br>
+         I embraced yoga not just as a physical practice but as a journey of self-awareness.<br>
+         My yoga mat became my sanctuary, a space where I could connect with my breath, <br>
+         find balance, and nurture both my body and mind.<br>
+      </p>    
+   </div>
+</div>
+
+<!--
+<div class="row">
+   <div class="col my-5 text-center join-me">            
       <p>
          Embark on a Journey of Mindfulness and Wellness <br>
          Find Your Balance. Connect with Your Breath. Transform Your Life. <br>
@@ -31,37 +47,61 @@
          let's create a community that supports and uplifts one another.
       </p>
       <div class="my-5 text-center">
-         <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">Join Me!</a>    
+         <h3 class="text-center">
+            <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">
+               <span>Join Me</span>
+            </a>            
+         </h3>             
       </div> 
    </div>  
 </div>
+-->
 
-   <!--
-   <div class="row row-cols-1 row-cols-md-3 g-4 my-5">
-      <div class="col">
-        <div class="card h-100">          
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>          
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">          
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>          
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">          
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>          
-        </div>
-      </div>
-    </div>
-   -->
+
+<!--Yoga Classes-->
+<div class="row text-center vinyasa-yoga">
+   <div class="col text-center about"> 
+      <h3 class="heading-large center-align my-5">
+         <span>Classes</span>
+      </h3>    
+      <p> 
+         My approach to teaching is rooted in creating a supportive and inclusive space. <br>
+         I believe that yoga is for everyone, regardless of age, flexibility, or experience. <br>
+         Together, we'll explore the foundations of yoga, celebrate progress over perfection, <br>
+         and build a community that embraces each individual's unique journey. <br>
+      </p>
+      <div class="row">
+         <div class="col">
+            <h3 class="my-5">
+               <span>Vinyasa Yoga</span>
+             </h3>
+            
+         </div>
+         <div class="col">
+            <h3 class="my-5">
+               <span>Pre-Natal Yoga/span>
+             </h3>
+            
+         </div>
+         <div class="col">
+            <h3 class="my-5">
+               <span>Flow Yoga</span>
+             </h3>
+            
+         </div>
+      </div>          
+   </div>
+   <div class="col-6">
+      <img src="{{ url_for('static', filename='images/vinyasa.jpeg') }}" alt="">
+   </div>
+</div>
+<div class="my-5 text-center">
+   <h3 class="text-center">
+      <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">
+         <span>Join Me</span>
+      </a>            
+   </h3>             
+</div> 
+
+
 {% endblock %}

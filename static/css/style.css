@@ -72,7 +72,8 @@ img {
     line-height: 1.2;
     	
  }
-.join-me span {
+.join-me span,
+.about-journey span {
     border-bottom: 4px solid rgb(238, 188, 161);
     justify-content: center;
 }
@@ -98,10 +99,29 @@ img {
     min-width: 200px;
 }
 
+.card {
+    
+      background: url('../images/card-background.jpeg') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      overflow: hidden;
+      position: relative;
+      opacity: 0.85; 
+}
+
+.vinyasa-yoga {
+    background-color: #d5bfa7;
+}
+.location {
+    background-color: #edeeeb;
+}
 
 /*--
 rgb(238, 188, 161)
  background-color: rgb(156, 93, 58);
+ #7f8e80
 --*/
 
 /*--

@@ -1,9 +1,35 @@
 {% extends "base.html" %}
+
+{% block banner %}
+<!--About banner-->
+   <div class="about">
+      <div class="row text-center">
+            <h2 class="heading-large center-align my-5">
+              <span>Contact Us</span>
+            </h2>                      
+      </div>    
+   </div>
+{% endblock %}
+
 {% block content %}
-<h5 class="text-center">Contact</h5>
+
+<div class="row text-center">
+  <div class="col text-center about"> 
+     <h3 class="heading-large center-align my-5">
+        <span>Location</span>
+     </h3>  
+     <p>
+        I discovered the transformative power of yoga during a time <br>
+        of personal exploration.Drawn to its holistic approach, <br>
+        I embraced yoga not just as a physical practice but as a journey of self-awareness.<br>
+        My yoga mat became my sanctuary, a space where I could connect with my breath, <br>
+        find balance, and nurture both my body and mind.<br>
+     </p>    
+  </div>   
+</div>
 
 <div class="row">    
-    <form class="col-12 col-md-6 offset-md-3" method="POST" action="{{ url_for('register') }}"> 
+    <form class="col-12 col-md-6 offset-md-3 my-5" method="POST" action="{{ url_for('register') }}"> 
         <!--First Name-->    
       <div class="mb-3">
         <label for="firstname" class="form-label">First Name</label>
@@ -29,4 +55,6 @@
       <button type="submit" class="contact-btn btn">Send</button>
     </form>
   </div>
+
+  
 {% endblock %}
