@@ -35,10 +35,22 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/get_contacts")
-def get_contacts():
-    contacts = mongo.db.contacts.find()
-    return render_template("contact.html", contacts=contacts)
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    """
+    Contact Details are safely stored in contact collection in database
+    """
+    if request.method == "POST":
+        contact = {
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name"),
+            "email": request.form.get("email"),
+            "message": request.form.get("message")
+        }
+        mongo.db.contacts.insert_one(contact)
+        flash("Message Sent Successfully!")
+
+    return render_template("contact.html")
 
 
 # User Authentication
