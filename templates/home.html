@@ -2,23 +2,24 @@
 
 {% block banner %}
 <!--Hero Image-->
-
-
-   <div class="container-large hero_image">
-      <div class="row welcome-heading text-center">
-         <h1 class="heading-large center-align">
-            <span>Nadya Yoga</span> <br>
-         </h1>
-         <h3 class="my-5">
-            Step onto the mat and into a world of tranquility and self-discovery.
-         </h3>                     
+   <div class="container-fluid container-large banner">
+      <div class="row">
+         <div class="col welcome-heading text-center">
+            <h1 class="heading-large center-align my-5">
+               <span>Nadya Yoga</span> <br>
+            </h1>
+            <h3 class="my-5">
+               Step onto the mat and into a world of tranquility and self-discovery.
+            </h3>                     
+         </div>
       </div>
    </div>
    
 {% endblock %}
+
 {% block content %}
 <!--About Nadya-->
-<div class="row">
+<div class="container-fluid row">
    <div class="col text-center about"> 
       <h3 class="heading-large center-align my-5">
          <span>About Nadya</span>
@@ -33,68 +34,48 @@
    </div>
 </div>
 
-<!--
-<div class="row">
-   <div class="col my-5 text-center join-me">            
-      <p>
-         Embark on a Journey of Mindfulness and Wellness <br>
-         Find Your Balance. Connect with Your Breath. Transform Your Life. <br>
-      </p>
-      <p>
-         Whether you're a seasoned yogi or stepping onto the mat for the first time, <br>
-         I invite you to join me on this adventure. Let's breathe, move, and discover the incredible potential <br>
-         that lies within each of us. Together,<br>
-         let's create a community that supports and uplifts one another.
-      </p>
-      <div class="my-5 text-center">
-         <h3 class="text-center">
-            <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">
-               <span>Join Me</span>
-            </a>            
-         </h3>             
-      </div> 
-   </div>  
-</div>
--->
-
-
 <!--Yoga Classes-->
-<div class="row text-center vinyasa-yoga">
-   <div class="col text-center about"> 
-      <h3 class="heading-large center-align my-5">
-         <span>Classes</span>
-      </h3>    
-      <p> 
-         My approach to teaching is rooted in creating a supportive and inclusive space. <br>
-         I believe that yoga is for everyone, regardless of age, flexibility, or experience. <br>
-         Together, we'll explore the foundations of yoga, celebrate progress over perfection, <br>
-         and build a community that embraces each individual's unique journey. <br>
-      </p>
-      <div class="row">
-         <div class="col">
-            <h4 class="my-5">
-               <span>Vinyasa Yoga</span>
-             </h4>
-            
+<div class="container-fluid text-center">
+   <div class="row">
+      <div class="col-12 col-lg-6 text-center about-wrapper"> 
+         <h3 class="center-align my-5"><span>Classes</span></h3>          
+         <p class="my-5"> 
+            My approach to teaching is rooted in creating a supportive and inclusive space. <br>
+            I believe that yoga is for everyone, regardless of age, flexibility, or experience. <br>
+            Together, we'll explore the foundations of yoga, celebrate progress over perfection, <br>
+            and build a community that embraces each individual's unique journey. <br>
+         </p>
+         <div class="row ">
+            <div class="col">
+               <h6>Vinyasa Yoga</h6>
+               <small class="text-body-secondary">
+                  Experience the fluidity of movement and breath with Vinyasa yoga,
+                  a dynamic practice that synchronizes breath with continuous flowing 
+                  sequences of poses.
+               </small>
+            </div>
+            <div class="col">
+               <h6>Pre-Natal Yoga</h6>
+               <small class="text-body-secondary">
+                  Nurture your body and prepare for the miracle of birth with prenatal yoga 
+                  led by Nadya. Our prenatal yoga classes offer gentle and supportive practices 
+                  tailored specifically for expectant mothers.
+               </small>
+            </div>
+            <div class="col">
+               <h6>Power Yoga</h6>
+               <small class="text-body-secondary">
+                  Ignite your inner fire and unleash your full potential with Power Yoga, 
+                  a dynamic and vigorous practice that builds strength, stamina, and mental 
+                  resilience. 
+               </small>
+            </div>
          </div>
-         <div class="col">
-            <h4 class="my-5">
-               <span>Pre-Natal Yoga</span>
-             </h4>
-            
-         </div>
-         <div class="col">
-            <h4 class="my-5">
-               <span>Flow Yoga</span>
-             </h4>
-            
-         </div>
-      </div>          
-   </div>
-   <div class="col-6">
-      <img src="{{ url_for('static', filename='images/vinyasa.jpeg') }}" alt="">
-   </div>
+      </div>
+      <div class="col-12 col-lg-6 vinyasa-yoga"></div>         
+   </div>   
 </div>
+
 <div class="my-5 text-center">
    <h3 class="text-center">
       <a href="{{ url_for('get_contacts') }}" class="join-me-button btn btn-lg rounded-0 py-3">

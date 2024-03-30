@@ -9,11 +9,6 @@ body {
     min-height: 100vh;
 }
 
-.logo-image img {
-    height: 100px;
-    width: 120px;
-    position: relative;
-}
 h3 {
     font-family: "Roboto", sans-serif;
     font-weight: 200;
@@ -28,18 +23,19 @@ textarea {
 }
 
 img {
-    height: 400px;
+    height: 100%;
 }
-
-.hero_image, 
+ 
 .about {
     padding-top: 40px;
+   
        
 }
 
 
 .banner {
     height: 350px;
+    width: 100%;
       background: url('../images/banner.jpeg') no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -51,7 +47,8 @@ img {
      
   }
 
-.welcome-heading {       
+.welcome-heading,
+.contact-heading {       
     justify-content: center; 
     position: relative;
     z-index: -1;
@@ -71,22 +68,28 @@ img {
     font-size: 3em;
     line-height: 1.2;
     	
- }
+ 
+}
+
 .join-me span,
-.about-journey span {
-    border-bottom: 4px solid rgb(238, 188, 161);
+.about-wrapper span,
+.contact-wrapper span {
+    border-bottom: 4px solid rgb(156, 93, 58);
     justify-content: center;
 }
- span {
+
+span {
 
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 
- }
-    
+}    
 
+.form-control {
+    border-color: rgb(156, 93, 58);  
+}
 .welcome-text {
     padding-top: 60px;
 }
@@ -111,13 +114,42 @@ img {
       opacity: 0.85; 
 }
 
-.vinyasa-yoga {
-    background-color: #d5bfa7;
-}
 .location {
     background-color: #7f8e80;
 }
 
+.about-wrapper,
+.contact-wrapper {    
+    background-color: #d5bfa7;
+}
+
+.vinyasa-yoga {
+    height: 500px;
+    max-width: 100%;  
+ 
+    background: url("../images/vinyasa.jpeg") no-repeat right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-image {
+    height: 600px;
+    max-width: 100%;  
+ 
+    background: url("../images/contact-yoga.jpeg") no-repeat right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
 
 /*--
 rgb(238, 188, 161)
@@ -133,3 +165,33 @@ rgb(238, 188, 161)
     margin-left: auto;
 
 }--*/
+
+/*----------------------------------Media Queries */
+
+@media screen and (max-width: 795px) {
+
+    .hero_image {
+        max-width: 100%;
+    }
+
+
+    .contact {
+        width:100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    
+}
+    
+    
+@media screen and (max-width: 1200px) {
+    
+    .contact {
+        width:90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    
+
+    
+}

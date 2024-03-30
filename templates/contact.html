@@ -2,60 +2,66 @@
 
 {% block banner %}
 <!--About banner-->
-<div class="about"> 
-  <div class="row text-center">
-      <h2 class="heading-large center-align my-5">
-        <span>Connect with Us</span>
-      </h2>  
-      <p>
-      Drop us an email or give us a call. We look forward to hearing from you.
-      
-      </p>
-      <p>
-      Mobile: +61 411 593 224 <br>
-      email: info@nadyayoga.com <br>
-      </p>
+<div class="container-fluid container-large banner"> 
+  <div class="row">
+    <div class="col contact-heading text-center">
+          <h3 class="heading-large center-align my-5">
+            <span>Talk to us</span>
+          </h3>
+          <p>
+            Thank you for reaching out to us.
+          </p>          
+      </div>
     </div>   
 </div> 
 {% endblock %}
 
 {% block content %}
-
-<div class="row text-center contact">
-  <div class="col-6 text-center"> 
-     <h3 class="heading-large center-align my-5">
-        <span>Contact</span>
-     </h3>  
-    <form class="my-5" method="POST" action="{{ url_for('register') }}"> 
-        <!--First Name-->    
-      <div class="mb-3">
-        <label for="firstname" class="form-label">First Name</label>
-        <input id="firstname" name= "firstname" type="text" class="form-control" required>        
-      </div>
-        <!--Last Name-->
-      <div class="mb-3">
-        <label for="lastname" class="form-label">Last Name</label>
-        <input id= "lastname" name="lastname" type="text" class="form-control" required>
-      </div>
-         <!--email-->
-         <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input id="email" name="email "type="email" class="form-control"  required>
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-         <!--Message-->
-         <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea id= "message" name="message" type="text" class="form-control" required></textarea>
-          </div>
-      <!--register-->
-      <button type="submit" class="contact-btn btn">Send</button>
-    </form>
+<div class="container-fluid row">
+  <div class="col text-center about"> 
+     
+     <p>
+      If you'd like more information about classes and locations, use the contact form below <br>
+      or contact Nadya on <br>
+      Mobile: +61 411 593 224 <br>     
+    </p>
+ 
   </div>
+</div>
 
-    <div class="col-6 my-5">
-      <img src="{{ url_for('static', filename='images/yoga-contact.jpeg') }}" alt="">
-   </div>
+<div class="container-fluid text-center contact-form">
+  <div class="row my-5">
+      <div class="col-12 col-lg-6 text-center contact-wrapper"> 
+        <h3 class="center-align my-5"><span>Contact</span></h3>
+        <form class="" method="POST" action="{{ url_for('register') }}"> 
+            <!--First Name-->    
+          <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input id="firstname" name= "firstname" type="text" class="form-control" required>        
+          </div>
+            <!--Last Name-->
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input id= "lastname" name="lastname" type="text" class="form-control" required>
+          </div>
+            <!--email-->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input id="email" name="email "type="email" class="form-control"  required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+            <!--Message-->
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id= "message" name="message" type="text" class="form-control" required></textarea>
+              </div>
+          <!--register-->
+          <button type="submit" class="contact-btn btn">Send</button>
+        </form>
+      </div>
+
+      <div class="col-12 col-lg-6 contact-image"></div>
+  </div>
 </div>
 
 <div class="container-large">
